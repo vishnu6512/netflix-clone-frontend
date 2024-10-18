@@ -1,0 +1,208 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.signin {
+    color: white;
+    background-color: #ff0000;
+    
+ }
+body {
+    margin: 0; /* Remove margin from body */
+    background-color: black;
+}
+
+.bg {
+    position: relative; /* Allows child elements to be positioned relative to this container */
+    min-height: 100vh; /* Full viewport height */
+    background-image: url('./images/images/header-image.png'); /* Background image for landing section */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+}
+
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1; /* Overlay should be below content */
+}
+
+.landing h1 {
+    margin-top: 150px;
+    font-size: 3.5rem; /* Responsive font size */
+    font-weight: 950; /* Makes the text bolder */
+    color: white; /* Sets the text color to white */
+    z-index: 2; /* Ensures text is above the dark overlay */
+    position: relative; /* Position relative for z-index to work */
+}
+
+.landing h5 {
+    color: white; /* Set h5 text color to white */
+    z-index: 2; /* Ensures text is above the dark overlay */
+    position: relative; /* Position relative for z-index to work */
+}
+
+.input-group {
+    max-width: 600px; /* Limit the maximum width for larger screens */
+    
+    margin: 20px auto; /* Center the input group horizontally */
+    position: relative; /* Ensure it stays above the overlay */
+    z-index: 2; /* Ensure the input group appears above the dark overlay */
+}
+
+.input-group input {
+    padding: 20px;
+    border-radius: 5px 0 0 5px; /* Rounded corners for the left side */
+    color: white;
+    box-shadow: none; /* Remove shadow if any */
+}
+
+input::placeholder {
+    color: white; /* Set placeholder text color to white */
+    border: solid;
+    opacity: 1;
+}
+
+.getstarted {
+    background-color: #ff0000;
+    width: 180px;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 7px;
+}
+
+.trending .carousel-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.trending .carousel-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.FAQ {
+    margin-left: 90px;
+    margin-right: 100px;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+.FAQ .accordion-button {
+    font-size: 25px;
+    padding: 30px;
+    color: white;
+    background-color: rgb(34, 34, 34);
+
+}
+
+.FAQ .accordion-body {
+    color: white;
+    padding: 30px;
+    background-color: rgb(34, 34, 34);
+}
+
+.box {
+    height: 300px;
+    width: 320px;
+    padding: 25px;
+    background-image: linear-gradient(140deg, #192145, #210E18);
+    /* justify-content: space-evenly; */
+    margin: 10px;
+    border-radius: 7%;
+    position: relative;
+}
+
+.box p{
+    color: #b3b3b3;
+}
+
+.box i {
+    position: absolute; /* Absolute positioning for the icons */
+    bottom: 15px;       /* Align at the bottom */
+    right: 15px;        /* Align at the right */
+    font-size: 60px;
+    
+    /* Gradient effect on icons */
+    background: linear-gradient(140deg, #1a004d, #b10000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.navbar, .container-fluid {
+    position: relative;
+    z-index: 2; /* Content appears above the dark overlay */
+    background-color: transparent; /* Make navbar background transparent */
+    padding: 10px 20px; /* Add padding to navbar for better spacing */
+}
+
+/* Optional: additional styling for the navbar links */
+.navbar-nav .nav-link {
+    color: white; /* Set link color to white */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7); /* Change link color on hover */
+}
+
+.footer {
+    
+    padding: 30px;
+    background-color: #333; /* Optional: set a background color for the footer */
+    color: white; /* Optional: set text color to white */
+}
+
+.parent {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row; /* Keep parent as row to stack children horizontally */
+    justify-content: space-around; /* Space out the child divs */
+}
+
+.child {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical stacking */
+    align-items: flex-start; /* Align items to the start of the column */
+    margin: 0 15px; /* Optional: add some margin between columns */
+}
+
+.child a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    margin: 5px 0; /* Space between links */
+}
+
+.child a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+.NI {
+    margin-left: 128px;
+    color: #7f7f7f;
+    margin-bottom: 50px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
+
+    .landing h5 {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+
+    .input-group {
+        width: 90%; /* Take more width on smaller screens */
+    }
+}
