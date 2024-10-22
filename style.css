@@ -139,7 +139,7 @@ input::placeholder {
 .navbar, .container-fluid {
     position: relative;
     z-index: 2; /* Content appears above the dark overlay */
-    background-color: transparent; /* Make navbar background transparent */
+    background-color: transparent;/*  Make navbar background transparent */
     padding: 10px 20px; /* Add padding to navbar for better spacing */
 }
 
